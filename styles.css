@@ -1,0 +1,99 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-bg: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+
+    background-color: var(--Very-dark-blue-bg);
+    color: var(--Soft-blue)
+
+}
+
+.container {
+    max-width: 20rem;
+    padding: 1.3em;
+    border-radius: 1em;
+    
+    background-color: var(--Very-dark-blue-card);
+    height: 36rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.title {
+    color: var(--White);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.cost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+}
+
+.amount, .days-left {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+.amount {
+    color: var(--Cyan);
+}
+
+.footer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: 4em;
+    border-top: .1px solid hsl(215, 51%, 40%);
+}
+
+.avatar {
+    max-width: 2rem;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.name {
+    color: var(--White)
+}
+
+.image {
+    border-radius: 1em;
+    position: relative;
+}
+
+.name:hover, .title:hover {
+    cursor: pointer;
+    color: var(--Cyan)
+}
+
+.image::after {
+    content: ' ';
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 1;
+
+}
+
+
